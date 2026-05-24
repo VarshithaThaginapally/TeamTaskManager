@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const client = axios.create({
-  baseURL: "https://teamtaskmanager-production.up.railway.app/api"
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true,
 });
 
-export default client;
+export default API;
